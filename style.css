@@ -1,0 +1,44 @@
+
+button{
+    height: 300px;
+    width: 400px;
+}
+
+p {
+    color: red;
+    width: 500px;
+    border: 1px solid black;
+    
+}
+
+h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body {
+    background-color: aqua;
+}
+
+.big  {
+    font-size: 39;
+
+}
+.promotion {
+    font-family: Geneva;
+    font-size: 40;
+    color:chartreuse;
+}
+
+.upper {
+    font-family: Verdana;
+    font-size: 20;
+    color: orange;
+}
+
+.lowercaste {
+    font-family: monospace;
+    font-size: 30;
+    color: forestgreen;
+    font-weight: bold;
+    font-style: italic;
+}
