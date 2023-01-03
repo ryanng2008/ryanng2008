@@ -1,5 +1,7 @@
 let times = new Array();
 let counter = 0;
+const body1 = document.body;
+
 
 function getTimed() {
   let unixtime = new Date().getTime() / 1000;
@@ -10,6 +12,11 @@ function getTimed() {
   document.getElementById("defg").innerText += ++counter;
   document.getElementById("ghijk").innerText = "REAL number of clicks: " + counter;
   return difference.toFixed(3);
+}
+
+function changeBackgroundColor() {
+  document.body.style.backgroundColor =  '${rgb(200,150,100)}'
+  document.body.style.backgroundColor = 'rgb(' + Math.floor(Math.random()*255) + ', ' + Math.floor(Math.random()*255) + ', ' + Math.floor(Math.random()*255) + ')';
 }
 
 function sayh(name) {

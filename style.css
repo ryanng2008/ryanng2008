@@ -47,3 +47,11 @@ body {
     width: 420;
     height: 315;
 }
+.color-changer {
+    height: 500px;
+    width: 500px;
+    font-family: 'Lucida Sans';
+    font-size: 100;
+    color: yellow;
+    font-weight: 100, bold;
+}
