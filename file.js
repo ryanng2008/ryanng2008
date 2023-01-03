@@ -1,6 +1,5 @@
 let times = new Array();
 let counter = 0;
-const body1 = document.body;
 
 
 function getTimed() {
