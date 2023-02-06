@@ -1,57 +1,129 @@
 
-button{
-    height: 300px;
-    width: 400px;
+button {
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  width: 250px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#submit-name {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: white;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.greeting {
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#container {
+  background-color: #F2F2F2;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.bpm {
+  height: 100px;
+  width: 300px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: lightblue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px;
+  box-shadow: x-offset y-offset blur-radius spread-radius color;
+
+}
+
+.bpm:active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 10px lightblue;
+}
+
+.bpm:hover {
+  background-color: lightgreen;
 }
 
 p {
-    color: red;
-    width: 500px;
-    border: 1px solid black;
-    
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+
 }
 
 h1 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 }
 body {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 .big  {
-    font-size: 39;
+  font-size: 39;
 
 }
 .promotion {
-    font-family: Geneva;
-    font-size: 40;
-    color:chartreuse;
+  font-family: Geneva;
+  font-size: 40;
+  color:chartreuse;
 }
 
 .upper {
-    font-family: Verdana;
-    font-size: 20;
-    color: orange;
+  font-family: Verdana;
+  font-size: 20;
+  color: orange;
 }
 
 .lowercaste {
-    font-family: monospace;
-    font-size: 30;
-    color: forestgreen;
-    font-weight: bold;
-    font-style: italic;
+  font-family: monospace;
+  font-size: 30;
+  color: forestgreen;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .videos {
-    width: 420;
-    height: 315;
+  width: 420;
+  height: 315;
 }
 .color-changer {
-    height: 500px;
-    width: 500px;
-    font-family: 'Lucida Sans';
-    font-size: 100;
-    color: darkblue;
-    font-weight: 100, bold;
+  height: 500px;
+  width: 500px;
+  font-family: 'Lucida Sans';
+  font-size: 100;
+  color: darkblue;
+  font-weight: 100, bold;
 }
+

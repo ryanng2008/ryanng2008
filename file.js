@@ -1,5 +1,7 @@
-let times = new Array();
+let times = [];
 let counter = 0;
+
+
 
 
 function getTimed() {
@@ -18,9 +20,79 @@ function changeBackgroundColor() {
   document.body.style.backgroundColor = 'rgb(' + Math.floor(Math.random()*255) + ', ' + Math.floor(Math.random()*255) + ', ' + Math.floor(Math.random()*255) + ')';
 }
 
-function sayh(name) {
-  alert('hello ' + name);
+let nameInput = document.getElementById("name-input");
+let submitButton = document.getElementById("submit-name");
+let greeting = document.getElementById("greeting");
+
+submitButton.addEventListener("click", function() {
+  let name = nameInput.value;
+  greeting.innerHTML = `Hi ${name}`;
+});
+
+
+let testLength = 5;
+let testLengthMS = testLength*1000;
+let startTestButton = document.getElementById("start-test");
+let clickerButton = document.getElementById("clicker-button"); 
+let lastClick = new Date().getTime();
+let currentClick;
+let clicks = [];
+let bpmLabel = document.getElementById("bpm-label");
+
+const bpmTest = () => {
+  startTestButton.disabled = true;
+  console.log('test start');
+  startTestButton.innerHTML = 'test in progress';
+  clickerButton.addEventListener('click', registerClick);
+  setTimeout(function () {
+    clickerButton.removeEventListener('click', registerClick);
+    clickerButton.disabled = true;
+    calculateBpm();
+  }, testLengthMS);
+
 }
+
+let clickedYet = false;
+
+const registerClick = () => {
+  currentClick = new Date().getTime();
+  difference = currentClick - lastClick; 
+  if(clickedYet) {
+    clicks.push(difference); 
+  } else {
+    clickedYet = true;
+  }
+  lastClick = currentClick;
+  // console.log('clicked');
+}
+
+const calculateBpm = () => {
+
+  let totalDifference = 0;
+  for (let i = 0; i < clicks.length; i++) {
+    totalDifference += clicks[i];
+  }
+  let averageDifference = totalDifference / clicks.length;
+  let bpm = 60000 / averageDifference;
+  console.log(bpm);
+  bpmLabel.innerHTML = `BPM: ${Math.round((bpm + Number.EPSILON) * 1000) / 1000}`;
+  console.log(bpmLabel);
+  console.log(bpmLabel.innerHTML);
+  reset();
+}
+
+const reset = () => {
+  startTestButton.disabled = false;
+  clickerButton.disabled = false;
+  clicks = [];
+  lastClick = new Date().getTime();
+  clickedYet = false;
+  startTestButton.innerHTML = 'redo bpm test';
+}
+
+
+
+
 
 /*console.log(eval('4+5'));
 console.log(eval("christmas".toUpperCase));
